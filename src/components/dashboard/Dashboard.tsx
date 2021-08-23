@@ -29,15 +29,15 @@ import cryptoNames from './Deposits';
 import ConnectButton from "./dapp/ConnectButton";
 import { formatEther, formatUnits } from '@ethersproject/units';
 import { useWeb3React } from "@web3-react/core"
-import {Home, active, account, library, connector, activate, deactivate, connect, disconnect } from "./index";
-import { injected } from "./connector"
+import {Home, active, account, library, connector, activate, deactivate, connect, disconnect } from "./index.js";
+import { injected } from "./connector.js";
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      {'Copyright © Brandon M & Finian Labs 2021'}
+      <Link color="inherit" href="https://github.com/FinianResearch/Finian.xyz">
+        Finian Labs & Brandon Maly 2021
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -47,7 +47,7 @@ function Copyright() {
 
 const drawerWidth = 240;
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: { mixins: { toolbar: any; }; zIndex: { drawer: number; }; transitions: { create: (arg0: string|string[],arg1: { easing: any; duration: any; }) => any; easing: { sharp: any; }; duration: { leavingScreen: any; enteringScreen: any; }; }; spacing: (arg0: number) => any; breakpoints: { up: (arg0: string) => any; }; }) => ({
   root: {
     display: 'flex',
   },
@@ -157,15 +157,17 @@ export default function Dashboard() {
 
           <IconButton color="inherit">
             
+
+            
          {/** 
           <div className="flex flex-col items-center justify-center">
       <button onClick={connect} className="py-2 mt-20 mb-4 text-lg font-bold text-white rounded-lg w-56 bg-blue-600 hover:bg-blue-800">Connect to MetaMask</button>
       {active ? <span>Connected with <b>{account}</b></span> : <span>Not connected</span>}
       <button onClick={disconnect} className="py-2 mt-20 mb-4 text-lg font-bold text-white rounded-lg w-56 bg-blue-600 hover:bg-blue-800">Disconnect</button>
       </div>
-
-
          **/}
+        
+
 
           </IconButton>
 
