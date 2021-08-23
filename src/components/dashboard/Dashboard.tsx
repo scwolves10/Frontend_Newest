@@ -31,6 +31,7 @@ import { formatEther, formatUnits } from '@ethersproject/units';
 import { useWeb3React } from "@web3-react/core"
 import {Home, active, account, library, connector, activate, deactivate, connect, disconnect } from "./index.js";
 import { injected } from "./connector.js";
+//import MyApp from "./_app";
 
 function Copyright() {
   return (
@@ -165,10 +166,12 @@ export default function Dashboard() {
       {active ? <span>Connected with <b>{account}</b></span> : <span>Not connected</span>}
       <button onClick={disconnect} className="py-2 mt-20 mb-4 text-lg font-bold text-white rounded-lg w-56 bg-blue-600 hover:bg-blue-800">Disconnect</button>
       </div>
-         **/}
+         
         
 
+          //<MyApp />**/}
 
+          
           </IconButton>
 
         </Toolbar>
