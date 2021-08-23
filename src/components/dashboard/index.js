@@ -1,7 +1,7 @@
 import { useWeb3React } from "@web3-react/core"
 import { injected } from "./connector"
 
-export default function Home() {
+function Home() {
   const { active, account, library, connector, activate, deactivate } = useWeb3React()
 
   async function connect() {
@@ -29,3 +29,4 @@ export default function Home() {
     </div>
   )
 }
+export default Home;
