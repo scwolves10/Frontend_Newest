@@ -27,7 +27,7 @@ import { ReactQueryDevtools } from "react-query/devtools";
 import CryptoTracker from './CryptoTracker';
 import cryptoNames from './Deposits';
 import ConnectButton from "./dapp/ConnectButton";
-import { formatEther, formatUnits, useEthers } from '@ethersproject/units';
+import { formatEther, formatUnits } from '@ethersproject/units';
 import { useWeb3React } from "@web3-react/core"
 import {Home, active, account, library, connector, activate, deactivate, connect, disconnect } from "./index";
 import { injected } from "./connector"
