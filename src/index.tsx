@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import App from "./App"
 // Import DAppProvider
 import { ChainId, DAppProvider } from "@usedapp/core";
+import { BrowserRouter } from 'react-router-dom';
 
 
 const config = {
@@ -13,19 +14,29 @@ const config = {
   },
 }
 
-
+{/** 
 ReactDOM.render(
   <React.StrictMode>
     {/* 
        Wrap our app in the provider, config is required, 
         but can be left as an empty object: 
-    */}
+    *
     <DAppProvider config={{config}}>
       <App />
     </DAppProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+  **/}
+
+  ReactDOM.render((
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+    ), document.getElementById('root'));
+
+    
 
 export function ActivateButton() {
   const { activateBrowserWallet, account } = useEthers()

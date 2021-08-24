@@ -1,5 +1,14 @@
+import React from 'react';
 import { useWeb3React } from "@web3-react/core"
 import { injected } from "./connector"
+import App from './src/App';
+import { BrowserRouter } from 'react-router-dom';
+
+ReactDOM.render((
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+  ), document.getElementById('root'));
 
 function Home() {
   const { active, account, library, connector, activate, deactivate } = useWeb3React()

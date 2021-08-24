@@ -14,6 +14,7 @@
     "allowSyntheticDefaultImports": true,
     "importsNotUsedAsValues": "error",
     "allowJs": true,
-    "types": ["node"]
+    "types": ["node"],
+    "outDir": "/build"
   }
 }
